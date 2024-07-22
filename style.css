@@ -1,0 +1,145 @@
+:root {
+    --background:#121212;
+    --date: #7188a9; 
+    --text-color: #eaeaea; 
+    --link-color: #65d2f9;
+    --h1-size: 2em; 
+    --h2-size: 1.75em; 
+    --h3-size: 1.5em; 
+    --h4-size: 1.4em; 
+    --p-size: 1.3em;
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background);
+    min-height: 100vh;
+}
+
+.navbar {
+    padding: 20px;
+    width: 100%; 
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; 
+    flex-wrap: wrap; 
+    margin: 0; 
+}
+
+
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 20px; 
+    font-size: 1.2em; 
+    transition: color 0.5s ease;
+}
+
+
+.navbar a:hover {
+    color: var(--link-color);
+}
+
+
+.content, .content * {
+    color: var(--text-color); 
+    font-size: var(--base-font-size);
+    font-weight: normal; 
+}
+
+.content a {
+    color: var(--link-color); 
+}
+
+
+.content h1 {
+    font-size: var(--h1-size);
+    font-weight: 600;
+}
+
+.content h2 {
+    font-size: var(--h2-size);
+    font-weight: 600;
+}
+
+.content h3 {
+    font-size: var(--h3-size);
+    font-weight: 600;
+}
+
+.content h4 {
+    font-size: var(--h4-size);
+    font-weight: 600;
+}
+
+.content p {
+    font-size: var(--p-size);
+}
+
+
+.content {
+    padding: 20px;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+}
+
+
+
+.content .post a {
+    color: var(--link-color);
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+    display: block; 
+    margin-bottom: 20px; 
+    padding: 10px; 
+    border-radius: 5px; 
+    font-size: 1.5em; 
+}
+
+.content .post h2, .content .post .date {
+    margin: 0; 
+}
+
+
+.content p time {
+    color: #8f8f8f; 
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+ol, ul {
+    font-size: 18px; 
+    margin-left: 0px; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+li {
+    margin-bottom: 10px; 
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row; /* Aligns children (images) in a horizontal line */
+    flex-wrap: wrap; /* Allows the images to wrap onto the next line when there's no more horizontal space */
+    padding: 20px;
+    justify-content: flex-start; /* Aligns children to the start of the flex container */
+    align-items: flex-start; /* Aligns children to the start of the cross axis */
+}
+
+.gallery img {
+    width: 100%; /* Adjust based on your design needs */
+    max-width: 200px; /* Sets a max width for each image */
+    height: auto; /* Keeps the aspect ratio intact */
+    padding: 5px; /* Adds space around images */
+    margin: 10px; /* Space between images */
+    display: inline-block; /* Aligns images in a line */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds shadow for better visibility */
+}
