@@ -126,20 +126,36 @@ li {
 }
 
 .gallery {
-    display: flex;
-    flex-direction: row; /* Aligns children (images) in a horizontal line */
-    flex-wrap: wrap; /* Allows the images to wrap onto the next line when there's no more horizontal space */
+    /* Default to 2 columns on smaller screens */
+    column-count: 2;
+    column-gap: 15px;
     padding: 20px;
-    justify-content: flex-start; /* Aligns children to the start of the flex container */
-    align-items: flex-start; /* Aligns children to the start of the cross axis */
 }
 
 .gallery img {
-    width: 100%; /* Adjust based on your design needs */
-    max-width: 200px; /* Sets a max width for each image */
-    height: auto; /* Keeps the aspect ratio intact */
-    padding: 5px; /* Adds space around images */
-    margin: 10px; /* Space between images */
-    display: inline-block; /* Aligns images in a line */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds shadow for better visibility */
+    width: 100%; /* Allows image to fill the column */
+    max-width: 100%; /* Prevents the image from exceeding the column width */
+    height: auto; /* Maintains aspect ratio */
+    margin-bottom: 10px; /* Space between images */
+    display: block; /* Necessary for proper display in columns */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional styling */
+}
+
+/* Media queries for larger screens */
+@media (min-width: 600px) {
+    .gallery {
+        column-count: 3; /* Increases columns as the screen width allows */
+    }
+}
+
+@media (min-width: 900px) {
+    .gallery {
+        column-count: 4; /* More columns for wider screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .gallery {
+        column-count: 5; /* Suitable for large desktop screens */
+    }
 }
