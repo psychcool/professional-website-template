@@ -107,6 +107,8 @@ ol, ul {
     margin-left: 0px; 
     margin-top: 20px; 
     margin-bottom: 20px; 
+    width: 100%;
+    box-sizing: border-box;
 }
 
 li {
