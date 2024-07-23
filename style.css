@@ -29,7 +29,6 @@ body {
     margin: 0; 
 }
 
-
 .navbar a {
     color: var(--text-color);
     text-decoration: none;
@@ -39,11 +38,9 @@ body {
     transition: color 0.5s ease;
 }
 
-
 .navbar a:hover {
     color: var(--link-color);
 }
-
 
 .content, .content * {
     color: var(--text-color); 
@@ -54,7 +51,6 @@ body {
 .content a {
     color: var(--link-color); 
 }
-
 
 .content h1 {
     font-size: var(--h1-size);
@@ -80,7 +76,6 @@ body {
     font-size: var(--p-size);
 }
 
-
 .content {
     padding: 20px;
     color: var(--text-color);
@@ -89,8 +84,6 @@ body {
     justify-content: flex-start; 
     align-items: flex-start; 
 }
-
-
 
 .content .post a {
     color: var(--link-color);
@@ -102,11 +95,6 @@ body {
     border-radius: 5px; 
     font-size: 1.5em; 
 }
-
-.content .post h2, .content .post .date {
-    margin: 0; 
-}
-
 
 .content p time {
     color: #8f8f8f; 
@@ -126,36 +114,34 @@ li {
 }
 
 .gallery {
-    /* Default to 2 columns on smaller screens */
     column-count: 2;
     column-gap: 15px;
     padding: 20px;
 }
 
 .gallery img {
-    width: 100%; /* Allows image to fill the column */
-    max-width: 100%; /* Prevents the image from exceeding the column width */
-    height: auto; /* Maintains aspect ratio */
-    margin-bottom: 10px; /* Space between images */
-    display: block; /* Necessary for proper display in columns */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional styling */
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
+    margin-bottom: 10px;
+    display: block; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
 }
 
-/* Media queries for larger screens */
 @media (min-width: 600px) {
     .gallery {
-        column-count: 3; /* Increases columns as the screen width allows */
+        column-count: 3; 
     }
 }
 
 @media (min-width: 900px) {
     .gallery {
-        column-count: 4; /* More columns for wider screens */
+        column-count: 4; 
     }
 }
 
 @media (min-width: 1200px) {
     .gallery {
-        column-count: 5; /* Suitable for large desktop screens */
+        column-count: 5; 
     }
 }
